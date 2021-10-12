@@ -1,0 +1,12 @@
+
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+    <div class="map_container">
+        <div class="responsive">
+            <iframe width="600" height="450" src="https://www.google.com/maps/embed/v1/place?q=<?= urlencode($this->googlemaps_address); ?>&zoom=<?= $this->googlemaps_zoom; ?>&key=<?= $this->googlemaps_apikey; ?>"></iframe>
+        </div>
+    </div>
+
+<?php $this->endblock(); ?>

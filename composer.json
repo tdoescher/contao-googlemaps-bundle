@@ -1,0 +1,33 @@
+{
+    "name": "tdoescher/googlemaps-bundle",
+    "description": "Content Element für Google Maps Embed API",
+    "type": "contao-module",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Torben Döscher",
+            "homepage": "https://tdoescher.de"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "contao/core-bundle": "^4.11"
+    },
+    "extra": {
+        "contao-manager-plugin": "tdoescher\\GoogleMapsBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "tdoescher\\GoogleMapsBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    }
+}
