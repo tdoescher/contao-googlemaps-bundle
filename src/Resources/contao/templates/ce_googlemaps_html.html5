@@ -1,0 +1,12 @@
+
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+    <div class="map_container">
+        <div class="responsive">
+            <?= $this->html; ?>
+        </div>
+    </div>
+
+<?php $this->endblock(); ?>

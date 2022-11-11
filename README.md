@@ -1,3 +1,3 @@
-# Content Element für Google Maps Embed API
+# Content Element für Google Maps Embed API oder HTML-Code
 
-Stellt ein Content Element zur verfügung um einfach mittels der Google Maps Embed API eine Karte zu erzeugen.
+Stellt Content Elemente zur verfügung, um mittels der Google Maps Embed API oder von Google erzeugten HTML-Code eine Karte zu anzuzeigen.

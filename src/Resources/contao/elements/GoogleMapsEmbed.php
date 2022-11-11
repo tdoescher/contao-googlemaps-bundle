@@ -6,7 +6,7 @@ use Contao\ContentElement;
 use Contao\BackendTemplate;
 use Contao\System;
 
-class GoogleMaps extends ContentElement
+class GoogleMapsEmbed extends ContentElement
 {
     protected $strTemplate = 'ce_googlemaps_embed';
 
