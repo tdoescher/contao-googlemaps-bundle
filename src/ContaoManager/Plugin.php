@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of GoogleMapsBundle for Contao
+ *
+ * @package     tdoescher/googlemaps-bundle
+ * @author      Torben Döscher <mail@tdoescher.de>
+ * @license     LGPL
+ * @copyright   tdoescher.de // WEB & IT <https://tdoescher.de>
+ */
+
 namespace tdoescher\GoogleMapsBundle\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
@@ -10,11 +19,11 @@ use tdoescher\GoogleMapsBundle\GoogleMapsBundle;
 
 class Plugin implements BundlePluginInterface
 {
-    public function getBundles(ParserInterface $parser): array
-    {
-        return [
-            BundleConfig::create(GoogleMapsBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
-        ];
-    }
+  public function getBundles(ParserInterface $parser): array
+  {
+    return [
+      BundleConfig::create(GoogleMapsBundle::class)
+        ->setLoadAfter([ContaoCoreBundle::class]),
+    ];
+  }
 }

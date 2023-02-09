@@ -10,8 +10,8 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
-        "contao/core-bundle": "^4.11 || ^5.0"
+        "php": ">=8.0",
+        "contao/core-bundle": "^4.13 || ^5.0"
     },
     "extra": {
         "contao-manager-plugin": "tdoescher\\GoogleMapsBundle\\ContaoManager\\Plugin"
@@ -19,15 +19,6 @@
     "autoload": {
         "psr-4": {
             "tdoescher\\GoogleMapsBundle\\": "src/"
-        },
-        "classmap": [
-            "src/Resources/contao/"
-        ],
-        "exclude-from-classmap": [
-            "src/Resources/contao/config/",
-            "src/Resources/contao/dca/",
-            "src/Resources/contao/languages/",
-            "src/Resources/contao/templates/"
-        ]
+        }
     }
 }
