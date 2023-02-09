@@ -5,8 +5,10 @@
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
-            "name": "Torben Döscher",
-            "homepage": "https://tdoescher.de"
+          "name": "Torben Döscher",
+          "email": "mail@tdoescher.de",
+          "homepage": "https://tdoescher.de",
+          "role": "Developer"
         }
     ],
     "require": {
