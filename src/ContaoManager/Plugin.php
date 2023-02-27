@@ -22,7 +22,7 @@ class Plugin implements BundlePluginInterface
   public function getBundles(ParserInterface $parser): array
   {
     return [
-      BundleConfig::create(GoogleMapsBundle::class)
+      BundleConfig::create(GooglemapsBundle::class)
         ->setLoadAfter([ContaoCoreBundle::class]),
     ];
   }
