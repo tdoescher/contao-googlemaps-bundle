@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of GoogleMapsBundle for Contao
+ * This file is part of GooglemapsBundle for Contao
  *
  * @package     tdoescher/googlemaps-bundle
  * @author      Torben Döscher <mail@tdoescher.de>
@@ -9,14 +9,14 @@
  * @copyright   tdoescher.de // WEB & IT <https://tdoescher.de>
  */
 
-namespace tdoescher\GoogleMapsBundle\DependencyInjection;
+namespace tdoescher\GooglemapsBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class GoogleMapsExtension extends Extension
+class GooglemapsExtension extends Extension
 { 
   public function load(array $mergedConfig, ContainerBuilder $container)
   {

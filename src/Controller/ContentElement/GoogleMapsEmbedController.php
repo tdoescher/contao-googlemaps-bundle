@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of GoogleMapsBundle for Contao
+ * This file is part of GooglemapsBundle for Contao
  *
  * @package     tdoescher/googlemaps-bundle
  * @author      Torben Döscher <mail@tdoescher.de>
@@ -9,7 +9,7 @@
  * @copyright   tdoescher.de // WEB & IT <https://tdoescher.de>
  */
 
-namespace tdoescher\GoogleMapsBundle;
+namespace tdoescher\GooglemapsBundle\Controller\ContentElement;
 
 use Contao\BackendTemplate;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 #[AsContentElement(category:'media')]
-class GoogleMapsEmbed extends AbstractContentElementController
+class GooglemapsEmbedController extends AbstractContentElementController
 {
   protected function getResponse(Template $template, ContentModel $model, Request $request): Response
   {
