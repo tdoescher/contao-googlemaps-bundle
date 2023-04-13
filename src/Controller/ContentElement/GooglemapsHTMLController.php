@@ -20,7 +20,7 @@ use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-#[AsContentElement(category:'media')]
+#[AsContentElement(category:'media', template:'ce_googlemaps_html')]
 class GooglemapsHTMLController extends AbstractContentElementController
 {
   protected function getResponse(Template $template, ContentModel $model, Request $request): Response
