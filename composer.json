@@ -1,7 +1,7 @@
 {
   "name": "tdoescher/googlemaps-bundle",
   "description": "Content Element für Google Maps Embed API oder HTML-Code",
-  "type": "contao-module",
+  "type": "contao-bundle",
   "license": "LGPL-3.0-or-later",
   "authors": [
     {
