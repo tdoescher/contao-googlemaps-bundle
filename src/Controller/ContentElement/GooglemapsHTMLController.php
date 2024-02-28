@@ -11,23 +11,19 @@
 
 namespace tdoescher\GooglemapsBundle\Controller\ContentElement;
 
-use Contao\BackendTemplate;
+use Contao\ContentModel;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
-use Contao\ContentModel;
-use Contao\System;
-use Contao\Template;
+use Contao\CoreBundle\Twig\FragmentTemplate;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-#[AsContentElement(category:'media', template:'ce_googlemaps_html')]
-class GooglemapsHTMLController extends AbstractContentElementController
+#[AsContentElement(category:'media')]
+class GooglemapsHtmlController extends AbstractContentElementController
 {
-  protected function getResponse(Template $template, ContentModel $model, Request $request): Response
+  protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
   {
-    if(System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest($request)) {
-      $template = new BackendTemplate('be_wildcard');
-    }
+    $template->set('html', $model->html);
 
     return $template->getResponse();
   }

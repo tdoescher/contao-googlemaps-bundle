@@ -1,0 +1,11 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{% block content %}
+  <div class="content-googlemaps-html__container">
+    <div class="content-googlemaps-html__responsive">
+      {% block html %}
+        {{ html|default|insert_tag|raw }}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}

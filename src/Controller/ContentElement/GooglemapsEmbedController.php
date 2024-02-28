@@ -11,23 +11,27 @@
 
 namespace tdoescher\GooglemapsBundle\Controller\ContentElement;
 
-use Contao\BackendTemplate;
+use Contao\ContentModel;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
-use Contao\ContentModel;
+use Contao\CoreBundle\Twig\FragmentTemplate;
 use Contao\System;
-use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-#[AsContentElement(category:'media', template:'ce_googlemaps_embed')]
+#[AsContentElement(category:'media')]
 class GooglemapsEmbedController extends AbstractContentElementController
 {
-  protected function getResponse(Template $template, ContentModel $model, Request $request): Response
+  protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
   {
-    if(System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest($request)) {
-      $template = new BackendTemplate('be_wildcard');
+    if(System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest($request))
+    {
+      return new Response($model->googlemaps_address);
     }
+
+    $template->set('apikey', $model->googlemaps_apikey);
+    $template->set('zoom', $model->googlemaps_zoom);
+    $template->set('address', $model->googlemaps_address);
 
     return $template->getResponse();
   }

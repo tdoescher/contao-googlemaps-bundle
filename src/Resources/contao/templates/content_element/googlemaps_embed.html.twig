@@ -1,0 +1,13 @@
+{% extends "@Contao/content_element/_base.html.twig" %}
+
+{% do csp_source('frame-src', 'https://www.google.com/maps/embed/v1/place') %}
+
+{% block content %}
+  <div class="content-googlemaps-embed__container">
+    <div class="content-googlemaps-embed__responsive">
+      {% block iframe %}
+        <iframe width="600" height="450" src="https://www.google.com/maps/embed/v1/place?q={{ address|url_encode }}&zoom={{ zoom }}&key={{ apikey }}"></iframe>
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}

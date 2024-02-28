@@ -3,4 +3,4 @@ services:
     autoconfigure: true
 
   tdoescher\GooglemapsBundle\Controller\ContentElement\GooglemapsEmbedController: ~
-  tdoescher\GooglemapsBundle\Controller\ContentElement\GooglemapsHTMLController: ~
+  tdoescher\GooglemapsBundle\Controller\ContentElement\GooglemapsHtmlController: ~

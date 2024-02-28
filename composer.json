@@ -1,26 +1,26 @@
 {
-    "name": "tdoescher/googlemaps-bundle",
-    "description": "Content Element für Google Maps Embed API oder HTML-Code",
-    "type": "contao-module",
-    "license": "LGPL-3.0-or-later",
-    "authors": [
-        {
-          "name": "Torben Döscher",
-          "email": "mail@tdoescher.de",
-          "homepage": "https://tdoescher.de",
-          "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": ">=8.0",
-        "contao/core-bundle": "^4.13 || ^5.0"
-    },
-    "extra": {
-        "contao-manager-plugin": "tdoescher\\GooglemapsBundle\\ContaoManager\\Plugin"
-    },
-    "autoload": {
-        "psr-4": {
-            "tdoescher\\GooglemapsBundle\\": "src/"
-        }
+  "name": "tdoescher/googlemaps-bundle",
+  "description": "Content Element für Google Maps Embed API oder HTML-Code",
+  "type": "contao-module",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Torben Döscher",
+      "email": "mail@tdoescher.de",
+      "homepage": "https://tdoescher.de",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": ">=8.0",
+    "contao/core-bundle": "^5.3"
+  },
+  "extra": {
+    "contao-manager-plugin": "tdoescher\\GooglemapsBundle\\ContaoManager\\Plugin"
+  },
+  "autoload": {
+    "psr-4": {
+      "tdoescher\\GooglemapsBundle\\": "src/"
+    }
+  }
 }
