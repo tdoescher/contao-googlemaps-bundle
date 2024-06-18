@@ -23,7 +23,7 @@ class GooglemapsHtmlController extends AbstractContentElementController
 {
   protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
   {
-    $template->set('html', $model->html);
+    $template->set('html', $model->unfilteredHtml ?? '');
 
     return $template->getResponse();
   }

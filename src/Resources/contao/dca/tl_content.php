@@ -10,7 +10,7 @@
  */
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['googlemaps_embed'] = '{type_legend},type,headline;{googlemaps_legend},googlemaps_apikey,googlemaps_zoom,googlemaps_address;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['googlemaps_html'] = '{type_legend},type,headline;{googlemaps_legend},html;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['googlemaps_html'] = '{type_legend},type,headline;{googlemaps_legend},unfilteredHtml;{template_legend:hide},customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space;{invisible_legend:hide},invisible,start,stop';
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['googlemaps_apikey'] = [
   'label'     => &$GLOBALS['TL_LANG']['tl_content']['googlemaps_apikey'],
