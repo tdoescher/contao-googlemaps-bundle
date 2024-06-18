@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 #[AsContentElement(category:'media')]
-class GooglemapsHtmlController extends AbstractContentElementController
+class GooglemapsHtmlsController extends AbstractContentElementController
 {
   protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
   {
