@@ -1,5 +1,11 @@
 {% extends "@Contao/content_element/_base.html.twig" %}
 
+{% do csp_source('connect-src', 'https://maps.googleapis.com') %}
+{% do csp_source('font-src', 'https://fonts.gstatic.com') %}
+{% do csp_source('img-src', 'https://maps.googleapis.com') %}
+{% do csp_source('img-src', 'https://maps.gstatic.com') %}
+{% do csp_source('style-src', 'https://fonts.googleapis.com') %}
+
 {% block content %}
   <div class="content-googlemaps-html__container">
     <div class="content-googlemaps-html__responsive">
