@@ -11,14 +11,14 @@
 {% do csp_source('style-src', 'https://fonts.googleapis.com') %}
 
 {% block content %}
-  <div class="content-googlemaps-html__container">
-    <div class="content-googlemaps-html__responsive">
-      {% block html %}
-        {{ html|default|insert_tag|raw }}
-      {% endblock %}
+    <div class="content-googlemaps-html__container">
+        <div class="content-googlemaps-html__responsive">
+            {% block html %}
+                {{ html|default|insert_tag|raw }}
+            {% endblock %}
+        </div>
     </div>
-  </div>
-  <style{{ attrs().setIfExists('nonce', csp_nonce('style-src')) }}>
-    /* Set a nonce for Google Maps API */
-  </style>
+    <style{{ attrs().setIfExists('nonce', csp_nonce('style-src')) }}>
+        /* Set a nonce for Google Maps API */
+    </style>
 {% endblock %}

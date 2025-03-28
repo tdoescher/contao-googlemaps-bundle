@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of GooglemapsBundle for Contao
+ * This file is part of Googlemaps Bundle for Contao
  *
  * @package     tdoescher/googlemaps-bundle
  * @author      Torben Döscher <mail@tdoescher.de>
@@ -19,11 +19,11 @@ use tdoescher\GooglemapsBundle\GooglemapsBundle;
 
 class Plugin implements BundlePluginInterface
 {
-  public function getBundles(ParserInterface $parser): array
-  {
-    return [
-      BundleConfig::create(GooglemapsBundle::class)
-        ->setLoadAfter([ContaoCoreBundle::class]),
-    ];
-  }
+    public function getBundles(ParserInterface $parser): array
+    {
+        return [
+            BundleConfig::create(GooglemapsBundle::class)
+                ->setLoadAfter([ ContaoCoreBundle::class ]),
+        ];
+    }
 }

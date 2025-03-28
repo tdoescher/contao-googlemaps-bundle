@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of GooglemapsBundle for Contao
+ * This file is part of Googlemaps Bundle for Contao
  *
  * @package     tdoescher/googlemaps-bundle
  * @author      Torben Döscher <mail@tdoescher.de>

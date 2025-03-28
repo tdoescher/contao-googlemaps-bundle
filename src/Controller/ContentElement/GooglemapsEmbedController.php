@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of GooglemapsBundle for Contao
+ * This file is part of Googlemaps Bundle for Contao
  *
  * @package     tdoescher/googlemaps-bundle
  * @author      Torben Döscher <mail@tdoescher.de>
@@ -19,20 +19,20 @@ use Contao\System;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-#[AsContentElement(category:'media')]
+#[AsContentElement(category: 'media')]
 class GooglemapsEmbedController extends AbstractContentElementController
 {
-  protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
-  {
-    if(System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest($request))
+    protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
-      return new Response($model->googlemaps_address);
+        if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest($request)) {
+            return new Response($model->googlemaps_address);
+        }
+
+        $template->set('address', $model->googlemaps_address);
+        $template->set('apikey', $model->googlemaps_apikey);
+        $template->set('title', $model->googlemaps_title);
+        $template->set('zoom', $model->googlemaps_zoom);
+
+        return $template->getResponse();
     }
-
-    $template->set('apikey', $model->googlemaps_apikey);
-    $template->set('zoom', $model->googlemaps_zoom);
-    $template->set('address', $model->googlemaps_address);
-
-    return $template->getResponse();
-  }
 }

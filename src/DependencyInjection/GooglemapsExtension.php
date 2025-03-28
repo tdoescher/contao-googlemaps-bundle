@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of GooglemapsBundle for Contao
+ * This file is part of Googlemaps Bundle for Contao
  *
  * @package     tdoescher/googlemaps-bundle
  * @author      Torben Döscher <mail@tdoescher.de>
@@ -17,10 +17,10 @@ use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 class GooglemapsExtension extends Extension
-{ 
-  public function load(array $mergedConfig, ContainerBuilder $container)
-  {
-    $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
-    $loader->load('controller.yaml');
-  }
+{
+    public function load(array $mergedConfig, ContainerBuilder $container)
+    {
+        $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
+        $loader->load('controller.yaml');
+    }
 }
