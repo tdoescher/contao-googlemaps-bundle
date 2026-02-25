@@ -1,6 +1,7 @@
 services:
   _defaults:
     autoconfigure: true
+    autowire: true
 
   tdoescher\GooglemapsBundle\Controller\ContentElement\GooglemapsEmbedController: ~
   tdoescher\GooglemapsBundle\Controller\ContentElement\GooglemapsHtmlController: ~

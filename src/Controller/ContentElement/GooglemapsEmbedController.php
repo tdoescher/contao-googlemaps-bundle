@@ -29,7 +29,7 @@ class GooglemapsEmbedController extends AbstractContentElementController
     protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
         if ($this->scopeMatcher->isBackendRequest($request)) {
-            return new Response($model->googlemaps_address);
+            return new Response(htmlspecialchars($model->googlemaps_address));
         }
 
         $template->set('address', $model->googlemaps_address);
