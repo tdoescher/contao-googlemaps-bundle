@@ -29,7 +29,7 @@ class GooglemapsHtmlController extends AbstractContentElementController
     protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
         if ($this->scopeMatcher->isBackendRequest($request)) {
-            return new Response('Google Maps HTML');
+            return new Response('Google Maps HTML-Element');
         }
 
         $template->set('html', $model->unfilteredHtml ?? '');

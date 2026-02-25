@@ -6,7 +6,7 @@
     <div class="content-googlemaps-embed__container">
         <div class="content-googlemaps-embed__responsive">
             {% block iframe %}
-                <iframe src="https://www.google.com/maps/embed/v1/place?q={{ address|url_encode }}&zoom={{ zoom|url_encode }}&key={{ apikey|url_encode }}"{% if title %} title="{{ title }}"{% endif %} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed/v1/place?q={{ address|url_encode }}&zoom={{ zoom }}&key={{ apikey|url_encode }}"{% if title %} title="{{ title }}"{% endif %} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             {% endblock %}
         </div>
     </div>
