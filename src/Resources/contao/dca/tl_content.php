@@ -37,6 +37,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['googlemaps_zoom'] = [
     'default' => 16,
     'exclude' => true,
     'inputType' => 'text',
-    'eval' => [ 'mandatory' => true, 'tl_class' => 'w50', 'maxlength' => '2' ],
-    'sql' => "varchar(2) NOT NULL default '16'"
+    'eval' => [ 'mandatory' => true, 'tl_class' => 'w50', 'maxlength' => '2', 'rgxp' => 'digit' ],
+    'sql' => "smallint(2) unsigned NOT NULL default 16"
 ];

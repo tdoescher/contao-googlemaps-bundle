@@ -14,17 +14,21 @@ namespace tdoescher\GooglemapsBundle\Controller\ContentElement;
 use Contao\ContentModel;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
+use Contao\CoreBundle\Routing\ScopeMatcher;
 use Contao\CoreBundle\Twig\FragmentTemplate;
-use Contao\System;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 #[AsContentElement(category: 'media')]
 class GooglemapsEmbedController extends AbstractContentElementController
 {
+    public function __construct(private readonly ScopeMatcher $scopeMatcher)
+    {
+    }
+
     protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
-        if (System::getContainer()->get('contao.routing.scope_matcher')->isBackendRequest($request)) {
+        if ($this->scopeMatcher->isBackendRequest($request)) {
             return new Response($model->googlemaps_address);
         }
 

@@ -1,12 +1,12 @@
 {% extends "@Contao/content_element/_base.html.twig" %}
 
-{% do csp_source('frame-src', 'https://www.google.com/maps/embed/v1/place') %}
+{% do csp_source('frame-src', 'https://www.google.com') %}
 
 {% block content %}
     <div class="content-googlemaps-embed__container">
         <div class="content-googlemaps-embed__responsive">
             {% block iframe %}
-                <iframe width="600" height="450" src="https://www.google.com/maps/embed/v1/place?q={{ address|url_encode }}&zoom={{ zoom }}&key={{ apikey }}"{% if title %} title="{{ title }}"{% endif %}></iframe>
+                <iframe src="https://www.google.com/maps/embed/v1/place?q={{ address|url_encode }}&zoom={{ zoom|url_encode }}&key={{ apikey|url_encode }}"{% if title %} title="{{ title }}"{% endif %} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             {% endblock %}
         </div>
     </div>

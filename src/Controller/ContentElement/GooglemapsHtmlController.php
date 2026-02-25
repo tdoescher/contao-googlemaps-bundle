@@ -14,6 +14,7 @@ namespace tdoescher\GooglemapsBundle\Controller\ContentElement;
 use Contao\ContentModel;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
+use Contao\CoreBundle\Routing\ScopeMatcher;
 use Contao\CoreBundle\Twig\FragmentTemplate;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,8 +22,16 @@ use Symfony\Component\HttpFoundation\Response;
 #[AsContentElement(category: 'media')]
 class GooglemapsHtmlController extends AbstractContentElementController
 {
+    public function __construct(private readonly ScopeMatcher $scopeMatcher)
+    {
+    }
+
     protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
+        if ($this->scopeMatcher->isBackendRequest($request)) {
+            return new Response('Google Maps HTML');
+        }
+
         $template->set('html', $model->unfilteredHtml ?? '');
 
         return $template->getResponse();
