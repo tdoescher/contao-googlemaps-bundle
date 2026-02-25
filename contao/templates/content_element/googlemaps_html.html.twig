@@ -11,12 +11,13 @@
 {% do csp_source('script-src', 'https://*.google.com') %}
 {% do csp_source('script-src', 'https://*.googleapis.com') %}
 {% do csp_source('style-src', 'https://fonts.googleapis.com') %}
+{% do csp_source('style-src', "'unsafe-inline'") %}
 
 {% block content %}
     <div class="content-googlemaps-html__container">
         <div class="content-googlemaps-html__responsive">
             {% block html %}
-                {{ html|default|insert_tag|raw }}
+                {{ googlemaps_html|insert_tag|raw }}
             {% endblock %}
         </div>
     </div>

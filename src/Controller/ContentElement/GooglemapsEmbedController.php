@@ -29,13 +29,13 @@ class GooglemapsEmbedController extends AbstractContentElementController
     protected function getResponse(FragmentTemplate $template, ContentModel $model, Request $request): Response
     {
         if ($this->scopeMatcher->isBackendRequest($request)) {
-            return new Response(htmlspecialchars($model->googlemaps_address));
+            return new Response(htmlspecialchars($model->googlemaps_address ?? ''));
         }
 
-        $template->set('address', $model->googlemaps_address);
-        $template->set('apikey', $model->googlemaps_apikey);
-        $template->set('title', $model->googlemaps_title);
-        $template->set('zoom', $model->googlemaps_zoom);
+        $template->set('googlemaps_address', $model->googlemaps_address ?? '');
+        $template->set('googlemaps_apikey', $model->googlemaps_apikey ?? '');
+        $template->set('googlemaps_title', $model->googlemaps_title ?? '');
+        $template->set('googlemaps_zoom', max(0, min(21, (int) ($model->googlemaps_zoom ?? 16))));
 
         return $template->getResponse();
     }

@@ -32,7 +32,7 @@ class GooglemapsHtmlController extends AbstractContentElementController
             return new Response('Google Maps HTML-Element');
         }
 
-        $template->set('html', $model->unfilteredHtml ?? '');
+        $template->set('googlemaps_html', $model->unfilteredHtml ?? '');
 
         return $template->getResponse();
     }

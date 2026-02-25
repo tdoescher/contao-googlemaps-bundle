@@ -15,21 +15,21 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['googlemaps_html'] = '{type_legend}
 $GLOBALS['TL_DCA']['tl_content']['fields']['googlemaps_address'] = [
     'exclude' => true,
     'inputType' => 'text',
-    'eval' => [ 'mandatory' => true, 'tl_class' => 'clr', 'maxlength' => '255' ],
+    'eval' => [ 'mandatory' => true, 'tl_class' => 'clr w100', 'maxlength' => 255 ],
     'sql' => "varchar(255) NOT NULL default ''"
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['googlemaps_apikey'] = [
     'exclude' => true,
     'inputType' => 'text',
-    'eval' => [ 'mandatory' => true, 'tl_class' => 'clr w50', 'maxlength' => '255' ],
+    'eval' => [ 'mandatory' => true, 'tl_class' => 'clr w50', 'maxlength' => 255 ],
     'sql' => "varchar(255) NOT NULL default ''"
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['googlemaps_title'] = [
     'exclude' => true,
     'inputType' => 'text',
-    'eval' => [ 'tl_class' => 'w100', 'maxlength' => '255' ],
+    'eval' => [ 'tl_class' => 'clr w100', 'maxlength' => 255 ],
     'sql' => "varchar(255) NOT NULL default ''"
 ];
 
@@ -37,6 +37,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['googlemaps_zoom'] = [
     'default' => 16,
     'exclude' => true,
     'inputType' => 'text',
-    'eval' => [ 'mandatory' => true, 'tl_class' => 'w50', 'maxlength' => '2', 'rgxp' => 'digit' ],
-    'sql' => "smallint(2) unsigned NOT NULL default 16"
+    'eval' => [ 'mandatory' => true, 'tl_class' => 'w50', 'maxlength' => 2, 'rgxp' => 'natural', 'minval' => 0, 'maxval' => 21 ],
+    'sql' => "tinyint unsigned NOT NULL default 16"
 ];
