@@ -7,11 +7,11 @@ package-lock.json
 .env
 
 # macOS
-Icon^M
-.nova
 .idea
+.nova
 .vscode
 .DS_Store*
 ._*
 AGENTS.md
 CLAUDE.md
+Icon^M
