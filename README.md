@@ -40,7 +40,7 @@ Die Templates setzen automatisch die erforderlichen Content Security Policy Head
 - `font-src https://fonts.gstatic.com`
 - `img-src https://*.google.com`, `https://*.googleapis.com`, `https://*.googleusercontent.com`, `https://*.gstatic.com`
 - `script-src https://*.google.com`, `https://*.googleapis.com`
-- `style-src https://fonts.googleapis.com`
+- `style-src 'unsafe-inline' https://fonts.googleapis.com`
 
 ## Template-Anpassung
 
