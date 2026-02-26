@@ -1,6 +1,7 @@
 {
   "name": "tdoescher/googlemaps-bundle",
   "description": "Content Element für Google Maps Embed API oder HTML-Code",
+  "keywords": ["contao", "google-maps"],
   "type": "contao-bundle",
   "license": "LGPL-3.0-or-later",
   "authors": [
@@ -16,7 +17,6 @@
     "contao/core-bundle": "^5.3",
     "contao/manager-plugin": "^5.3"
   },
-  "keywords": ["contao", "google-maps"],
   "extra": {
     "contao-manager-plugin": "tdoescher\\GooglemapsBundle\\ContaoManager\\Plugin"
   },
@@ -26,4 +26,3 @@
     }
   }
 }
-w
