@@ -7,7 +7,7 @@
         <div class="content-googlemaps-embed__responsive">
             {% block iframe %}
                 {% if googlemaps_address and googlemaps_apikey %}
-                    <iframe src="https://www.google.com/maps/embed/v1/place?q={{ googlemaps_address|url_encode }}&zoom={{ googlemaps_zoom|url_encode }}&key={{ googlemaps_apikey|url_encode }}" title="{{ googlemaps_title|default('Google Maps')|e('html_attr') }}" width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed/v1/place?q={{ googlemaps_address|url_encode }}&zoom={{ googlemaps_zoom|url_encode }}&key={{ googlemaps_apikey|url_encode }}"{% if googlemaps_title %} title="{{ googlemaps_title|e('html_attr') }}"{% endif %} width="600" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 {% else %}
                     <p class="error">{{ 'tl_content.googlemaps_embed_error'|trans({}, 'contao_tl_content') }}</p>
                 {% endif %}
