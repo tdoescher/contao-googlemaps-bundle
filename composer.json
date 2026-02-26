@@ -14,8 +14,7 @@
   ],
   "require": {
     "php": ">=8.1",
-    "contao/core-bundle": "^5.3",
-    "contao/manager-plugin": "^5.3"
+    "contao/core-bundle": "^5.3"
   },
   "extra": {
     "contao-manager-plugin": "tdoescher\\GooglemapsBundle\\ContaoManager\\Plugin"
