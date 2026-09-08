@@ -38,5 +38,5 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['googlemaps_zoom'] = [
     'exclude' => true,
     'inputType' => 'text',
     'eval' => [ 'mandatory' => true, 'tl_class' => 'w50', 'maxlength' => 2, 'rgxp' => 'natural', 'minval' => 0, 'maxval' => 21 ],
-    'sql' => "tinyint unsigned NOT NULL default 16"
+    'sql' => "smallint(5) unsigned NOT NULL default 16"
 ];
